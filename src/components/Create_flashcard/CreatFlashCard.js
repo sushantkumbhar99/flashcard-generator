@@ -37,18 +37,22 @@ const CreateFlashCard = () => {
 
   const validationSchema = Yup.object({
     groupName: Yup.string()
-      .min(7, "Group name must be 7 characters")
+      .min(5, "Group name must be 5 characters")
+      .max(20,"Group name must be at most 20 characters")
       .required("Please Enter Group Name"),
     description: Yup.string()
       .min(20, "Description must be at least 20 characters")
+      .max(70,"Description must be at most 70 characters")
       .required("Please Add Description"),
     terms: Yup.array(
       Yup.object({
         title: Yup.string()
           .min(5, "Term name should be 5 characters")
+          .max(15, "Term name should be at most 15 characters")
           .required("Please Enter Term"),
         definition: Yup.string()
           .min(10, "Term definition shoud be 10 characters")
+          .max( 100, "Defination should be at most 100 characters")
           .required("Please Enter Definition"),
       })
     ),
@@ -140,7 +144,7 @@ const CreateFlashCard = () => {
                     <div className=" ">
               
                       <img
-                        className="h-16 w-14 mt-2"
+                        className="h-16 w-40 mt-2"
                         src={values.uploadimage}
                         alt=""
                       />
@@ -199,7 +203,7 @@ const CreateFlashCard = () => {
               <div className="mt-5">
                 <div>
                 <label
-                  className="text-zinc-500 mt-4 font-bold text-md"
+                  className="text-zinc-500 mt-3 font-bold text-md"
                   htmlFor="description"
                 >
                   

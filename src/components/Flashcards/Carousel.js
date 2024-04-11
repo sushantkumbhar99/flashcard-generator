@@ -1,5 +1,9 @@
 
 import React, { useState } from 'react';
+import flashGif from './terms.gif'
+import { RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowLeftSLine } from "react-icons/ri";
+
 
 const Carousel = ({ terms }) => {
   const [currentTermIndex, setCurrentTermIndex] = useState(0);
@@ -17,35 +21,65 @@ const Carousel = ({ terms }) => {
   }
 
   return (
-    <div className="w-[100%] bg-pink-50 mt-5 ">
-      <div className="flex">
-        <div className='flex flex-col shadow-lg  w-1/4'>
+    // maindiv 
+    <div className=" h-full    ">
+        {/* both title and descriptions  */}
+      <div className="     h-screen mt-5 ">
+      <div className='  flex  '>
+          {/* titles  */}
+          
+        <div className='w-[30%]  shadow-lg rounded-lg flex flex-col  text-center  items-center  mr-10  overflow-auto h-[285px]  bg-white'> 
+        <p className='my-5 text-xl font-bold text-gray-700 w-[90%] mx-auto pb-2 border-b-[1.5px] border-red-100'>Flashcards</p>
+        <div className=' '>
         {terms.map((term, index) => (
-          <div className='flex h-full flex-col ml-2 '>
+          <div className='' >
+     
           <div
             key={index}
-            
+            className='flex   pb-2  '
             onClick={() => setCurrentTermIndex(index)}
           >
-             {currentTermIndex === index ? '>' : null} {term.title} 
+
+             {currentTermIndex === index ? <RiArrowRightSLine className='mt-1 text-red-500 text-xl' />  : null} <span className='text-lg font-medium to-slate-900 '> {term.title} </span>
           </div>
           </div>
         ))}
         </div>
-        <div className=' shadow-xl w-[90%]  ml-5'>
-          <div className='h-full w-[100%] ' >
-            <p>{terms[currentTermIndex].definition}</p>
-            <img src={terms[currentTermIndex].term_uploadimage} alt="Flashcard_Image" className="w-40" />
-          </div>
-          <div className='flex p-2 m-4'>
-             <button className='  m-4' onClick={handlePrev}>&#60;</button>
-            <p>{currentTermIndex +1} / {terms.length}</p>
-            <button className='  m-4' onClick={handleNext}>&#62;</button>
-            </div>
-         
         </div>
-      </div>
+
+        <div className='ml-5 w-[70%] bg-white shadow-lg rounded-lg  h-[350px]   py-10 pl-4 border-[1px]'>
+
+            {/* img and defination  */}
+          <div className=' flex  h-[286px]  ' >
+            <div className=' w-[50%] my-4 pr-2'>
+           { terms[currentTermIndex].term_uploadimage ? (
+            <img src={terms[currentTermIndex].term_uploadimage} alt="Flashcard_Image" className="max-h-[286px]  " />
+            ):
+            (
+              <img src={flashGif} alt="Flashcard_Image" className=" " />
+            )}
+            </div>
+
+            <div className='   '>
+            <p className='text-lg text-red-950 '>{terms[currentTermIndex].definition}</p>
+            </div>
+
+          </div>
+
+          <div className='flex justify-center p-2  mt-10'>
+             <button className='text-2xl  mr-5' onClick={handlePrev}><RiArrowLeftSLine /></button>
+            <span className='mb-1'>{currentTermIndex +1} / {terms.length}</span>
+            <button className='text-2xl  ml-5' onClick={handleNext}><RiArrowRightSLine/></button>
+            </div>
+
+          </div>
+          </div>
+          
+         
     </div>
+      
+      </div>
+   
   );
 };
 
