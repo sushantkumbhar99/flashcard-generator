@@ -42,16 +42,16 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
   };
 
   return (
-    <div>
+    <div className='  '>
       {terms.map((term, index) => (
-        <div className='flex mb-7 p-5 ' key={index}>
-          <div className='flex'>
-            <div className='mt-12'>
-              <span className='py-2 px-4 bg-red-500 text-slate-50 rounded-full mr-4'>{index + 1}</span>
+        <div className='flex mb-7 p-5 flex-wrap  ' key={index}>
+          <div className='flex flex-wrap lg:flex-row md:flex-row sm:flex-row  md:items-start sm:items-start flex-col '>
+            <div className=' sm:mt-5 md:mt-5 sm:pb-3 md:pb-5 flex lg:pb-8'>
+              <div className='py-2 px-4 bg-red-500 text-slate-50 rounded-full  mr-4'>{index + 1}</div>
             </div>
 
             {/* Term Title */}
-            <div className='flex flex-col'>
+            <div className='flex w-48  flex-col'>
               <div>
                 <h3 className='mb-2 text-md font-bold text-gray-500'>Enter Term*</h3>
               </div>
@@ -60,7 +60,7 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
                   type='text'
                   name={`terms[${index}].title`}
                   placeholder='Enter Term Title'
-                  className='border-2 mb-4 w-72 h-10 pl-2 mt-2  bg-slate-200 rounded-md font-semibold'
+                  className='border-2 mb-4  h-10 pl-2 mt-2 w-full  bg-slate-200 rounded-md font-semibold'
                   innerRef={(el) => (titleInputRefs.current[index] = el)} // Assign ref to title input field
                 />
               </div>
@@ -68,7 +68,7 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
             </div>
 
             {/* Term Definition */}
-            <div className='flex flex-col ml-6'>
+            <div className='flex flex-col   xl:ml-5 lg:ml-5 md:ml-5 ml-0 sm:ml-4'>
               <div>
                 <h3 className='mb-2 text-md font-bold text-gray-500'>Term Definition*</h3>
               </div>
@@ -77,7 +77,7 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
                   type='text'
                   name={`terms[${index}].definition`}
                   placeholder='Enter Term Definition'
-                  className='border-2 mb-2 w-72 h-10 pl-2 mt-2 bg-slate-200 rounded-md font-semibold'
+                  className='border-2 mb-2  w-full md:w-80 lg:w-96 sm:w-auto h-10 pl-2 mt-2 bg-slate-200 rounded-md font-semibold'
                 />
               </div>
               <ErrorMessage name={`terms[${index}].definition`} component='div' className='text-red-500' />
@@ -90,7 +90,7 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
               {/* Image upload button */}
               {term.term_uploadimage ? (
                 <div className='flex '>
-                  <img className='h-16 mt-4  pl-5 w-28' src={term.term_uploadimage} alt='' />
+                  <img className='h-16 mt-4  pl-3 w-28' src={term.term_uploadimage} alt='' />
                   <TiDeleteOutline className='text-3xl  text-red-600' onClick={() => setFieldValue(`terms.${index}.term_uploadimage`, '')} />
                 </div>
               ) : (
@@ -129,13 +129,13 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
             <div className='flex flex-col mt-5'>
               {/* Delete icon */}
               {terms.length > 1 && (
-                <button type='button' className='ml-10 text-3xl ' onClick={() => handleDeleteTerm(index)}>
+                <button type='button' className='ml-8 text-3xl ' onClick={() => handleDeleteTerm(index)}>
                   <BiSolidTrashAlt />
                 </button>
               )}
 
               {/* Edit icon with onClick event to focus on title input */}
-              <div className='ml-10 text-3xl mt-2 text-blue-500' onClick={() => focusOnTitleInput(index)}>
+              <div className='ml-8 text-3xl mt-2 text-blue-500' onClick={() => focusOnTitleInput(index)}>
                 <TbEdit />
               </div>
             </div>
@@ -159,3 +159,4 @@ const TermCard = ({ terms, push, remove, setFieldValue }) => {
 };
 
 export default TermCard;
+

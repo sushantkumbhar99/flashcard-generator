@@ -4,7 +4,7 @@ import { Formik, Form, FieldArray, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { addFlashcard } from "../../Redux/flashcardsSlice";
-import TermCard from "./TermCard";
+import TermCard from './TermCard'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaFileUpload } from "react-icons/fa";
@@ -42,7 +42,7 @@ const CreateFlashCard = () => {
       .required("Please Enter Group Name"),
     description: Yup.string()
       .min(20, "Description must be at least 20 characters")
-      .max(70,"Description must be at most 70 characters")
+      .max(80,"Description must be at most 80 characters")
       .required("Please Add Description"),
     terms: Yup.array(
       Yup.object({
@@ -95,22 +95,22 @@ const CreateFlashCard = () => {
 
             <Form  >
               {/* for upper part img title and description  */}
-              <div className="shadow-lg bg-white rounded-md p-5 pl-12 py-7 ">
+              <div className="shadow-lg  bg-white rounded-md p-5 pl-12 py-7 ">
 
                 {/* title and img in this div  */}
-                <div className="flex ">
+                <div className="flex flex-wrap ">
 
 
                 {/*for label and title */}
-                 <div> 
-                    <div>
+                 <div   className="w-96 px-3 "> 
+                     
                      <label
                        className="text-zinc-500 font-bold text-md"
                        htmlFor="groupName"
                      >
                        Group Name*
                      </label>
-                    </div>
+                    
 
                   <div>
                    <Field
@@ -118,7 +118,7 @@ const CreateFlashCard = () => {
                     id="groupName"
                      name="groupName"
                      placeholder="Group Name"
-                    className="w-80 h-9 pl-2 mt-2 bg-slate-200 font-normal rounded-md"
+                    className="appearance-none block w-full my-2 pl-2 bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   />
 
                     <ErrorMessage
@@ -130,21 +130,14 @@ const CreateFlashCard = () => {
                </div>
 
 
-
-
-                    {/* it's a image upload button 
-                  if image is present it's shows the image preview with delete icon to delete image
-                  if image is not present its shows image uploading button */}
-
-
                     {/* upload img div  */}
-               <div className="ml-10">
+               <div className=" md:ml-5">
               
                   {values.uploadimage ? (
                     <div className=" ">
               
                       <img
-                        className="h-16 w-40 mt-2"
+                        className="h-16 w-full mt-2"
                         src={values.uploadimage}
                         alt=""
                       />
@@ -156,7 +149,7 @@ const CreateFlashCard = () => {
                   ) : (
                     <label
                       htmlFor="uploadimage"
-                      className="w-44 h-[38px]  cursor-pointer px-3 mx-3 mt-8 py-1 bg-gray-200 border-gray-200 flex  items-center justify-center  rounded"
+                      className="w-40 h-[38px]  cursor-pointer px-3 mx-3 mt-8 py-1 bg-gray-200 border-gray-200 flex  items-center justify-center  rounded"
                     >
                       <FaFileUpload className=" text-[1.8em] text-blue-700 p-1" />  
                       <span className="text-blue-700 font-bold">
@@ -200,8 +193,7 @@ const CreateFlashCard = () => {
              </div>
 
 
-              <div className="mt-5">
-                <div>
+              <div className="  w-full my-4 px-3">
                 <label
                   className="text-zinc-500 mt-3 font-bold text-md"
                   htmlFor="description"
@@ -210,7 +202,7 @@ const CreateFlashCard = () => {
                   Add Description*
                 </label>
 
-                </div>
+                 
 
                 <div>
                 <Field
@@ -218,7 +210,7 @@ const CreateFlashCard = () => {
                   id="description"
                   name="description"
                   placeholder="Write your thoughts here..."
-                  className="w-9/12 h-20 pl-2 mt-2 bg-slate-200 font-normal rounded-md"
+                  className="w-9/12 h-20 pl-2 py-1 mt-2 bg-slate-200 font-normal rounded-md"
                 />
                 </div>
                 <ErrorMessage

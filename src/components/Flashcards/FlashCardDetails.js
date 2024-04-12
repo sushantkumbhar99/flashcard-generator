@@ -22,7 +22,7 @@ const FlashcardDetails = () => {
   const onClose = () => { setVisible(false) }
 
   if (!flashcard) {
-    return <div>Flashcard not found</div>;
+    return <div className=''>Flashcard not found</div>;
   }
  
   console.log("Terms:", flashcard.terms); // Log terms before rendering
@@ -33,16 +33,13 @@ const FlashcardDetails = () => {
 
     <div className='w-9/12 m-auto  mt-1'>
 
-
-
-
       <div>
         <div className=''>
           <div className='flex'>
             <Link className='text-xl mt-3 ' to={"/MyFlashCards"}><FaArrowLeft /></Link> 
-            <span><h1 className='ml-10 font-bold py-2'>{flashcard.title}</h1></span>
+            <span><h1 className='ml-10 font-bold text-lg py-2'>{flashcard.title}</h1></span>
           </div>
-          <p className='ml-16 font-medium'>{flashcard.description}</p>
+          <p className='ml-16 font-normal'>{flashcard.description}</p>
         </div>
         <div>
           <Carousel terms={flashcard.terms} />
@@ -50,7 +47,7 @@ const FlashcardDetails = () => {
       </div>
 
          {/* button for share, download, print  */}
-         <div className=" w-[250px] my-3  rounded-lg h-48">
+         <div className=" w-[250px]  rounded-lg h-48">
             <div onClick={() => setVisible(true)} className="bg-white dark:bg-gray-800 flex cursor-pointer mb-4 drop-shadow-md hover:scale-110 rounded-lg w-[250px] p-2 h-10"><TfiBackRight className='text-2xl mx-5' />Share</div>
             <div className="bg-white dark:bg-gray-800 flex cursor-pointer my-4 drop-shadow-md hover:scale-110 rounded-lg w-[250px] p-2 h-10"><BsCloudDownload className='text-2xl mx-5' />Download</div>
             <div onClick={() => { window.print() }} className="bg-white dark:bg-gray-800 flex cursor-pointer my-4 drop-shadow-md hover:scale-110 rounded-lg w-[250px] p-2 h-10"><BsPrinter className='text-2xl mx-5' />Print</div>

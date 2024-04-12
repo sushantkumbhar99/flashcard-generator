@@ -24,11 +24,11 @@ const Carousel = ({ terms }) => {
     // maindiv 
     <div className=" h-full    ">
         {/* both title and descriptions  */}
-      <div className="     h-screen mt-5 ">
-      <div className='  flex  '>
+      <div className="  h-screen    mt-5 ">
+      <div className='  flex flex-col   sm:flex-row lg:flex-row md:flex-row xl:flex-row'>
           {/* titles  */}
           
-        <div className='w-[30%]  shadow-lg rounded-lg flex flex-col  text-center  items-center  mr-10  overflow-auto h-[285px]  bg-white'> 
+        <div className='w-[80%] sm:w-[30%]  mb-5  shadow-lg rounded-lg flex flex-col  text-center  items-center  mr-5  overflow-auto h-[285px]  bg-white'> 
         <p className='my-5 text-xl font-bold text-gray-700 w-[90%] mx-auto pb-2 border-b-[1.5px] border-red-100'>Flashcards</p>
         <div className=' '>
         {terms.map((term, index) => (
@@ -47,10 +47,10 @@ const Carousel = ({ terms }) => {
         </div>
         </div>
 
-        <div className='ml-5 w-[70%] bg-white shadow-lg rounded-lg  h-[350px]   py-10 pl-4 border-[1px]'>
+        <div className='ml-0 w-[80%] bg-white shadow-lg rounded-lg  h-[350px]   py-10 pl-4 border-[1px]'>
 
             {/* img and defination  */}
-          <div className=' flex  h-[286px]  ' >
+          <div className=' flex flex-col  h-[286px]  ' >
             <div className=' w-[50%] my-4 pr-2'>
            { terms[currentTermIndex].term_uploadimage ? (
             <img src={terms[currentTermIndex].term_uploadimage} alt="Flashcard_Image" className="max-h-[286px]  " />
