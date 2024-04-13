@@ -32,7 +32,7 @@ const Carousel = ({ terms }) => {
         <p className='my-5 text-xl font-bold text-gray-700 w-[90%] mx-auto pb-2 border-b-[1.5px] border-red-100'>Flashcards</p>
         <div className=' '>
         {terms.map((term, index) => (
-          <div className='' >
+         
      
           <div
             key={index}
@@ -42,7 +42,7 @@ const Carousel = ({ terms }) => {
 
              {currentTermIndex === index ? <RiArrowRightSLine className='mt-1 text-red-500 text-xl' />  : null} <span className='text-lg font-medium to-slate-900 '> {term.title} </span>
           </div>
-          </div>
+         
         ))}
         </div>
         </div>
@@ -50,7 +50,7 @@ const Carousel = ({ terms }) => {
         <div className='ml-0 w-[80%] bg-white shadow-lg rounded-lg  h-[350px]   py-10 pl-4 border-[1px]'>
 
             {/* img and defination  */}
-          <div className=' flex flex-col  h-[286px]  ' >
+          <div className=' flex flex-col sm:flex-row  h-[286px]  ' >
             <div className=' w-[50%] my-4 pr-2'>
            { terms[currentTermIndex].term_uploadimage ? (
             <img src={terms[currentTermIndex].term_uploadimage} alt="Flashcard_Image" className="max-h-[286px]  " />
@@ -65,8 +65,10 @@ const Carousel = ({ terms }) => {
             </div>
 
           </div>
-
-          <div className='flex justify-center p-2  mt-10'>
+          <div className="flex justify-center mt-8 ">
+              <p className="mx-auto  h-3 w-60 bg-black opacity-5  rounded-[100%] shadow-xl"></p>
+            </div>
+          <div className='flex justify-center p-2  my-3'>
              <button className='text-2xl  mr-5' onClick={handlePrev}><RiArrowLeftSLine /></button>
             <span className='mb-1'>{currentTermIndex +1} / {terms.length}</span>
             <button className='text-2xl  ml-5' onClick={handleNext}><RiArrowRightSLine/></button>

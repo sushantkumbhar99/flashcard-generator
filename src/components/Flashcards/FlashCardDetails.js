@@ -25,7 +25,7 @@ const FlashcardDetails = () => {
     return <div className=''>Flashcard not found</div>;
   }
  
-  console.log("Terms:", flashcard.terms); // Log terms before rendering
+  // console.log("Terms:", flashcard.terms); // Log terms before rendering
 
   return (
 
