@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# AlmaBetter-Flashcard-Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a frontend Capstone project given by the Almabetter which is Flashcard Generator.
 
-## Available Scripts
+## Deployment
 
-In the project directory, you can run:
+[Click Here]( ) to see my flashcard generator website.
 
-### `npm start`
+## Run Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  npm install
+```
 
-### `npm test`
+Start the server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm run start
+```
 
-### `npm run build`
+## Authors
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [@Sushant Kumbhar](https://github.com/sushantkumbhar99)
+- [@Sushant Khot]( )
+ 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
+- React js( React Router ),
+- Redux,
+- TailwindCSS,
+- React-icons,
+- React Formik & Yup,
+- React-toastify,
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## About The Project (Flashcard )
+This project is created with mainly React js, In this project mainly we have three pages.
+```bash
+1) create a Flashcard page 
+2) My Flashcard page 
+3) Flashcard Details page
+```
+- Create flashcard page: In this page, we used a Formik for creating input boxes, yap for validation, and a switch to toggle between light mode to dark mode.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- My Flashcard page: On this page, you can see your all flashcards 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- FlashcardDetails page: On this page, you can see your flashcards details and you can also share or print your page 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How To Use
 
-## Learn More
+1) Open the flashcard generator [Click Here](h /).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2) Fill up all the input boxes without any Errors and click on the "Create" button.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3) For viewing recently created flashcards click on the "My flashcard" link this will show all flashcards you created recently.
 
-### Code Splitting
+4) For the Viewing Details of the flashcard click on the "view card" button it will redirect you to the flashcard details page where you take a look at your flashcard details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Features
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add More Input Box
+- Delete Input Box
+- Edit Input box
+- Upload Image
+- View cards
+- Share
+- Carousel

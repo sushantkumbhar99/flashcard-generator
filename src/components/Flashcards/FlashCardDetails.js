@@ -31,11 +31,11 @@ const FlashcardDetails = () => {
 
 
 
-    <div className='w-9/12 m-auto  mt-1'>
+    <div className='w-9/12 m-auto overflow-hidden  mt-1'>
 
       <div>
         <div className=''>
-          <div className='flex'>
+          <div className='flex overflow-hidden'>
             <Link className='text-xl mt-3 ' to={"/MyFlashCards"}><FaArrowLeft /></Link> 
             <span><h1 className='ml-10 font-bold text-lg py-2'>{flashcard.title}</h1></span>
           </div>
@@ -47,7 +47,7 @@ const FlashcardDetails = () => {
       </div>
 
          {/* button for share, download, print  */}
-         <div className=" w-[250px]  rounded-lg h-48">
+         <div className=" w-[250px] mt-16 sm:mt-1 rounded-lg h-48">
             <div onClick={() => setVisible(true)} className="bg-white dark:bg-gray-800 flex cursor-pointer mb-4 drop-shadow-md hover:scale-110 rounded-lg w-[250px] p-2 h-10"><TfiBackRight className='text-2xl mx-5' />Share</div>
             <div className="bg-white dark:bg-gray-800 flex cursor-pointer my-4 drop-shadow-md hover:scale-110 rounded-lg w-[250px] p-2 h-10"><BsCloudDownload className='text-2xl mx-5' />Download</div>
             <div onClick={() => { window.print() }} className="bg-white dark:bg-gray-800 flex cursor-pointer my-4 drop-shadow-md hover:scale-110 rounded-lg w-[250px] p-2 h-10"><BsPrinter className='text-2xl mx-5' />Print</div>
