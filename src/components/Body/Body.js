@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Routes, Route, Link, useLocation  } from "react-router-dom";
-import CreateFlashCard from "../Create_flashcard/CreatFlashCard";
+import CreateFlashCard from "../Create_flashcard/CreateFlashCard";
 import MyFlashCards from "../Flashcards/MyFlashCards";
 import FlashCardDetails from "../Flashcards/FlashCardDetails";
 import Error404 from "../Error/Error";

@@ -24,7 +24,7 @@ const Carousel = ({ terms }) => {
     // maindiv 
     <div className=" h-[100%]    ">
         {/* both title and descriptions  */}
-      <div className=" flex h-screen    mt-5 ">
+      <div className="     mt-5 ">
       <div className='  flex flex-col   sm:flex-row lg:flex-row md:flex-row xl:flex-row'>
           {/* titles  */}
           
@@ -46,13 +46,13 @@ const Carousel = ({ terms }) => {
         </div>
         <div className='ml-0 w-[80%]  bg-white shadow-lg rounded-lg  h-[350px]   py-10 pl-4 border-[1px]'>
             {/* img and defination  */}
-          <div className=' flex flex-col sm:flex-row  h-[286px]  ' >
+          <div className=' flex flex-col items-center sm:items-start sm:flex-row  h-[286px]  ' >
             <div className=' w-[50%]  my-4 pr-2'>
            { terms[currentTermIndex].term_uploadimage ? (
             <img src={terms[currentTermIndex].term_uploadimage} alt="Flashcard_Image" className="max-h-[286px]  " />
             ):
             (
-              <img src={flashGif} alt="Flashcard_Image" className=" " />
+              <img src={flashGif} alt="Flashcard_Image" className="max-h-[286px] " />
             )}
             </div>
 
@@ -60,10 +60,10 @@ const Carousel = ({ terms }) => {
             <p className='text-lg text-red-950 '>{terms[currentTermIndex].definition}</p>
             </div>
           </div>
-          <div className="flex justify-center mt-8 ">
+          <div className="flex justify-center  items-center mt-8 ">
               <p className="mx-auto  h-3 w-60 bg-black opacity-5  rounded-[100%] shadow-xl"></p>
             </div>
-          <div className='flex justify-center p-2  my-3'>
+          <div className='flex justify-center p-2   sm:my-3'>
              <button className='text-2xl  mr-5' onClick={handlePrev}><RiArrowLeftSLine /></button>
             <span className='mb-1'>{currentTermIndex +1} / {terms.length}</span>
             <button className='text-2xl  ml-5' onClick={handleNext}><RiArrowRightSLine/></button>
