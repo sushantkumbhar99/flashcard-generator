@@ -1,5 +1,4 @@
-# AlmaBetter-Flashcard-Generator
-
+# AlmaBetter-Flashcard Generator
 This is a frontend Capstone project given by the Almabetter which is Flashcard Generator.
 
 ## Deployment
@@ -23,7 +22,7 @@ Start the server
 ## Authors
 
 - [@Sushant Kumbhar](https://github.com/sushantkumbhar99)
-- [@Sushant Khot]( )
+- [@Sushant Khot](https://github.com/Sushant7975 )
  
 
 
@@ -68,3 +67,4 @@ This project is created with mainly React js, In this project mainly we have thr
 - View cards
 - Share
 - Carousel
+- online Status
