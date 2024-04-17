@@ -26,7 +26,7 @@ const MyFlashCards = () => {
     };
 
     return (
-        <div className=' pb-48 h-screen bg-red-50 '>
+        <div className=' pb-48 min-h-screen bg-red-50 '>
             <div className='w-[40%] sm:w-4/5  flex m-auto flex-wrap justify-center mt-5'>
 
                 {flashcards.length === 0 ? (
