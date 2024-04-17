@@ -3,7 +3,7 @@ This is a frontend Capstone project given by the Almabetter which is Flashcard G
 
 ## Deployment
 
-[Click Here]( ) to see my flashcard generator website.
+[Click Here](https://flashcard-generator-sushant-kumbhar.vercel.app/ ) to see my flashcard generator website.
 
 ## Run Locally
 
