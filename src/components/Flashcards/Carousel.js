@@ -48,7 +48,7 @@ const Carousel = ({ terms }) => {
           >
              {currentTermIndex === index ? <RiArrowRightSLine className='mt-1 text-red-500 text-xl' />  : null} 
              {currentTermIndex === index ? 
-             <span className='text-lg font-medium text-red-500 '> {term.title} </span> :
+             <span className='text-xl font-medium text-red-500 '> {term.title} </span> :
              <span className='text-lg font-medium to-slate-900 '> {term.title} </span>
              }
           </div>
@@ -58,7 +58,7 @@ const Carousel = ({ terms }) => {
         <div className='ml-0 w-full  bg-white shadow-lg rounded-lg  h-[350px]   py-10 pl-4 border-[1px]'>
             {/* img and defination  */}
           <div className=' flex flex-col items-center sm:items-start sm:flex-row  h-[286px]  ' >
-            <div className=' w-[50%]  my-4 pr-2'>
+            <div className='transition duration-300 ease-in-out hover:scale-110 w-[50%]  my-4 pr-2'>
            { terms[currentTermIndex].term_uploadimage ? (
             <img src={terms[currentTermIndex].term_uploadimage} alt="Flashcard_Image" className="max-h-[286px]  " />
             ):
