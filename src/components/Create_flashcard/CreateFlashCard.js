@@ -235,7 +235,7 @@ const CreateFlashCard = () => {
               <div className="flex justify-center mb-10">
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 hover:from-green-500 hover:via-yellow-500 hover:to-red-500 text-white font-semibold py-1 px-4 rounded"
+                  className="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 hover:from-green-500 hover:via-yellow-500 hover:to-red-500 text-white font-semibold py-2 px-8 rounded"
                 >
                   Create
                 </button>
